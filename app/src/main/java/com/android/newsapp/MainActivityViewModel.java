@@ -38,7 +38,7 @@ public class MainActivityViewModel extends AndroidViewModel {
     }
 
     public void makeApiCall(){
-        Call<MainNews> call=newsServiceApi.getData("us",99,apiKey);
+        Call<MainNews> call=newsServiceApi.getData("in",99,apiKey);
         call.enqueue(new Callback<MainNews>() {
             @Override
             public void onResponse(Call<MainNews> call, Response<MainNews> response) {
