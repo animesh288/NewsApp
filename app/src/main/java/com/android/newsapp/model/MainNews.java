@@ -6,10 +6,10 @@ public class MainNews {
 
     private String status;
     private int totalResults;
-    private ArrayList<String> articles;
+    private ArrayList<Headlines> articles;
 
 
-    public MainNews(String status, int totalResults, ArrayList<String> articles) {
+    public MainNews(String status, int totalResults, ArrayList<Headlines> articles) {
         this.status = status;
         this.totalResults = totalResults;
         this.articles = articles;
@@ -31,11 +31,11 @@ public class MainNews {
         this.totalResults = totalResults;
     }
 
-    public ArrayList<String> getArticles() {
+    public ArrayList<Headlines> getArticles() {
         return articles;
     }
 
-    public void setArticles(ArrayList<String> articles) {
+    public void setArticles(ArrayList<Headlines> articles) {
         this.articles = articles;
     }
 }
