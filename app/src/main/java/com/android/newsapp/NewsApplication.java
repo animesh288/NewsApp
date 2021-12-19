@@ -4,6 +4,9 @@ import android.app.Application;
 
 import com.android.newsapp.di.NewsComponent;
 
+import dagger.internal.DaggerCollections;
+import dagger.internal.DaggerGenerated;
+
 public class NewsApplication extends Application {
 
     private NewsComponent newsComponent;
@@ -12,6 +15,8 @@ public class NewsApplication extends Application {
     public void onCreate() {
 
         super.onCreate();
+
+//        newsComponent=
     }
 
 }

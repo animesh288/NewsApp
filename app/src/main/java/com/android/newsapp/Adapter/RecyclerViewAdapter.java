@@ -73,6 +73,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public int getItemCount() {
         return headlinesArrayList.size();
     }
+
+
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         TextView mHeading,mDescription,mAuthor,mDate;
