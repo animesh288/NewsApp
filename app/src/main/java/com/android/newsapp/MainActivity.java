@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onChanged(MainNews mainNews) {
                 if(mainNews!=null){
+                    recyclerViewAdapter.setContext(MainActivity.this);
                     recyclerViewAdapter.setHeadlinesArrayList(mainNews.getArticles());
                     recyclerViewAdapter.notifyDataSetChanged();
                 }else{
@@ -47,5 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        mainActivityViewModel.makeApiCall();
     }
 }

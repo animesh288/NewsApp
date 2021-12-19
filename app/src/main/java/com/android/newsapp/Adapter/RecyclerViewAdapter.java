@@ -71,6 +71,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemCount() {
+        if(headlinesArrayList==null) return 0;
         return headlinesArrayList.size();
     }
 

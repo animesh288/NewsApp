@@ -27,6 +27,9 @@ public class MainActivityViewModel extends AndroidViewModel {
 
     public MainActivityViewModel(@NonNull Application application) {
         super(application);
+
+        ((NewsApplication)application).getNewsComponent().inject(MainActivityViewModel.this);
+
         liveData=new MutableLiveData<>();
     }
 
