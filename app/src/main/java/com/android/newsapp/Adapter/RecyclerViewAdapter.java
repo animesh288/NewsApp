@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.newsapp.R;
 import com.android.newsapp.model.Headlines;
-import com.android.newsapp.webView;
+import com.android.newsapp.DetailedNews;
 import com.squareup.picasso.Picasso;
 
 
@@ -55,8 +55,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(context, webView.class);
-                intent.putExtra("url",headlinesArrayList.get(position).getUrl());
+                Intent intent=new Intent(context, DetailedNews.class);
+                intent.putExtra("data",new String[]{headlinesArrayList.get(position).getAuthor(),
+                        headlinesArrayList.get(position).getTitle(),
+                        headlinesArrayList.get(position).getDescription(),
+                        headlinesArrayList.get(position).getUrlToImage(),
+                        headlinesArrayList.get(position).getPublishedAt(),
+                        headlinesArrayList.get(position).getUrl(),
+                        headlinesArrayList.get(position).getContent()
+                });
                 context.startActivity(intent);
             }
         });

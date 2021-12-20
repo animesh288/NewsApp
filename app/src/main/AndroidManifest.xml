@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NewsApp">
         <activity
-            android:name=".webView"
+            android:name=".DetailedNews"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
